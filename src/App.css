@@ -8,7 +8,7 @@ body {
 /* -------------- PAGE LAYOUT --------------------------------- */
 
 .background {
-  background: url("./components/rain.jpg") no-repeat;
+  background: url("./components/rain.jpg") ;
   background-size: cover; 
   height: 100vh;
   display: flex;
@@ -17,27 +17,38 @@ body {
 }
 
 .container {
-  min-height: 70vh;
-  width: 70%;
-
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+  /*
+  align-items: center;
+  justify-content: center;
+  */
+  min-width: 45%;
+  max-width: 95%;
   background: #fff;
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 30px;
 }
 
 .col {
+  flex: 1;
   text-align: center;
+  justify-content: center;
   padding: 10px;
+  max-width: 95%;
 }
 
 /* -------------- HEADER --------------------------------- */
 
 .logo {
-  height: 80px;
+  height: 60px;
 }
-.weather_icon {
-  filter: grayscale(100%);
+
+.title-container_title {
+  color: #43B6C2;
+  font-size: 24px;
 }
 
 .title-container_subtitle {
@@ -50,7 +61,7 @@ body {
 /* -------------- FORM --------------------------------- */
 
 form {
-  padding: 10px 0 20px 0px;
+  padding: 15px 0 20px 0px;
 }
 
 input[type="text"] {
@@ -59,73 +70,79 @@ input[type="text"] {
   border-bottom: solid 1px #303030;
   width: 40%;
   padding: 0 0 2px 4px;
-  color: #303030 !important;
+  color: #8b8b8b !important;
   font-weight: lighter;
   letter-spacing: 2px;
   margin-bottom: 10px;
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 14px;
   outline: none;
 }
 
 input:-webkit-autofill {
     box-shadow: 0 0 0 30px #ffffff inset; 
-    -webkit-text-fill-color: #303030 !important;
+    -webkit-text-fill-color: #6b6b6b !important;
 }
 
 /* -------------- SHOW WEATHER --------------------------------- */
 
-.weather_info {
-  background: #fff;
-  max-width: 90%;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 2px;
+.weather-icon {
+  filter: grayscale(100%);
 }
 
-.weather_key {
-  width:80%;
+.weather {
+  background: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  align-self: center;
+  padding: 0 50px 0 50px;
+}
+
+.weather-info {
   color: #52505D;
   border-bottom: solid 2px rgba(110, 110, 110, 0.06);
-  padding: 5px 5px 5px 5px;
+  padding: 3px 3px 4px 3px;
   font-weight: 400;
   align-self: center;
 }
 
-.weather_error {
+.weather-error {
   padding: 5px 0 5px 0;
   background-color: transparent;
   color: #FF766C;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 1px;
   font-weight: 400;
 }
 
-.weather_key:last-child {
+.weather-info:last-child {
   border: 0;
 }
 
-.weather_value {
+.weather-value {
   color: #52505D;
-  font-weight: bold;
+  font-weight: 500;
 }
+
 
 /* -------------- BUTTONS --------------------------------- */
 
 button {
   border: 0;
-  height: 30px;
+  height: 25px;
+  width: 105px;
   border-radius: 2px;
   letter-spacing: 1px;
-  font-size: 14px;
-  width: 115px;
+  font-size: 12px;
   cursor: pointer;
-  background-color: #283347;
+  background-color: #FF766C;
   transition-duration: 0.2s;
   color: #fff;
   font-weight: 100;
   padding: 2px;
   display: inline-block;
+
 }
 
 button:hover {
@@ -133,15 +150,14 @@ button:hover {
   color: #e6e6e6;
 }
 
-button:active {
+button:active, button:focus {
   outline: none;
 }
 
 /* -------------- FAVORITES --------------------------------- */
 
 .favorites, .favoritesD {
-
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 1px;
   line-height: 1.5;
   padding: 1px;
@@ -151,21 +167,26 @@ button:active {
   border: none;
 }
 
+.favorites:last-child, .favoritesD:last-child {
+  padding-bottom: 20px;
+}
+
 .favorites:hover {
-  background-color: grey;
+  background-color:transparent;
   color:  #818181;
+  font-weight:bold;
 }
 
 .favoritesD {
+  width: 10px;
   color: #FF766C;
-
   font-size: 10px;
-  font-weight:100;
+  font-weight:bold;
 }
 
 .favoritesD:hover {
-  background-color: Transparent;
-  color: rgb(129, 60, 55);
+  background-color: transparent;
+  color: #3e4b64;
 }
 
 .favoritesAlert {

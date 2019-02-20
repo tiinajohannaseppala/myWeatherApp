@@ -143,7 +143,7 @@ class App extends Component {
                       </div>
 
                       <div className="col">
-                          <h4>My Favorites</h4>
+                          <h2 className="title-container_title">MyFavorites</h2>
                           <Favorites favorites={this.state.favorites} deleteFavorite={this.deleteFavorite} showFavoriteWeather={this.showFavoriteWeather}/>
                           <AddFavorite addFavorite={this.addFavorite} />     
                       </div>
