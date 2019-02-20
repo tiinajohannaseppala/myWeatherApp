@@ -23,7 +23,7 @@ class AddFavorite extends Component {
       <div>
         <form onSubmit={ this.handleSubmit }>
           <label htmlFor="city"></label>
-          <input type="text" id="city" onChange={ this.handleChange } placeholder="Enter new favorite" value={ this.state.city } required />
+          <input type="text" id="city" onChange={ this.handleChange } placeholder="Enter city" value={ this.state.city } required />
           <button >Add new</button>
         </form>
       </div>

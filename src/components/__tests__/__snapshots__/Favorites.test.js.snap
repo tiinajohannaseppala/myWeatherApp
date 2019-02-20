@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when multiple favorites 1`] = `
+<div
+  className="favorite-list"
+>
+  <div
+    className="favorite"
+  >
+    <button
+      className="favorites"
+      onClick={[Function]}
+    >
+      Helsinki
+    </button>
+    <button
+      className="favoritesD"
+      onClick={[Function]}
+    >
+      x
+    </button>
+  </div>
+  <div
+    className="favorite"
+  >
+    <button
+      className="favorites"
+      onClick={[Function]}
+    >
+      Kemi
+    </button>
+    <button
+      className="favoritesD"
+      onClick={[Function]}
+    >
+      x
+    </button>
+  </div>
+  <div
+    className="favorite"
+  >
+    <button
+      className="favorites"
+      onClick={[Function]}
+    >
+      Kolari
+    </button>
+    <button
+      className="favoritesD"
+      onClick={[Function]}
+    >
+      x
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders when no favorites 1`] = `
+<div
+  className="favorite-list"
+>
+  <p
+    className="favoritesAlert"
+  >
+    Hey, you have no favorites
+  </p>
+</div>
+`;
